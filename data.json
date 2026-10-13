@@ -1,5 +1,5 @@
 {
-  "generated_et": "2026-10-12 23:42 ET",
+  "generated_et": "2026-10-12 23:43 ET",
   "quotes": {
     "TSLA": {
       "price": 378.03,
@@ -32,9 +32,9 @@
       "asof_et": "2026-10-12 close"
     },
     "NQ=F": {
-      "price": 30666.75,
-      "change": -442.0,
-      "change_pct": -1.42,
+      "price": 30663.75,
+      "change": -445.0,
+      "change_pct": -1.43,
       "asof_et": "2026-10-12 close"
     }
   }
