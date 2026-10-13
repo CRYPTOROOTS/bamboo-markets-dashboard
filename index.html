@@ -1,0 +1,77 @@
+<!doctype html><html data-theme="terminal"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bamboo Labs AI — Markets Overview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root,[data-theme=terminal]{--bg:#0a0b0a;--pn:#0f110f;--bd:#2a2d2a;--tx:#e8e6df;--mu:#8a8d88;--am:#f5a800;--gr:#3ddc5a;--rd:#ff5c5c;--btx:#0a0b0a}
+[data-theme=obsidian]{--bg:#0d0f14;--pn:#141821;--bd:#2a3140;--tx:#dfe5ee;--mu:#7f8a9c;--am:#b99cff;--gr:#4fd1c5;--rd:#ff6b81;--btx:#0d0f14}
+[data-theme=paper]{--bg:#f4f1e8;--pn:#fbf9f3;--bd:#cfc9b8;--tx:#1d1c18;--mu:#6e6a5e;--am:#b36b00;--gr:#1f8a3a;--rd:#c0392b;--btx:#fbf9f3}
+[data-theme=pulse]{--bg:#07060f;--pn:#100d1e;--bd:#2e2850;--tx:#eeeaff;--mu:#8c86b0;--am:#ff3d9a;--gr:#00e5ff;--rd:#ff4d4d;--btx:#07060f}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:12px/1.5 "JetBrains Mono","IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace}
+.top{display:flex;justify-content:space-between;align-items:center;padding:10px 20px;border-bottom:1px solid var(--bd)}
+.lbl{color:var(--mu);font-size:10px;text-transform:uppercase;letter-spacing:.14em}
+.seg{display:inline-flex;border:1px solid var(--bd);border-radius:4px;padding:3px;gap:2px;margin-left:10px}
+.seg button{font:inherit;font-size:11px;background:none;border:0;color:var(--tx);padding:5px 10px;border-radius:3px;cursor:pointer}
+.seg button.on{background:var(--am);color:var(--btx);font-weight:700}
+.wrap{max-width:1180px;margin:28px auto;border:1px solid var(--bd);padding:18px;transition:max-width .2s}
+body.mobile .wrap{max-width:390px}
+.hd{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;border-bottom:1px solid var(--bd);padding-bottom:10px;margin-bottom:12px}
+h1{margin:0;font-size:15px;color:var(--am);letter-spacing:.08em;font-weight:500}h1 b{color:var(--gr);margin-right:8px}
+.sub{color:var(--mu);font-size:10px;margin-top:4px}
+.badge{display:inline-block;border:1px solid var(--am);color:var(--am);font-size:9px;padding:2px 7px;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}
+.badge.g{border-color:var(--gr);color:var(--gr)}.badge.r{border-color:var(--rd);color:var(--rd)}.badge.m{border-color:var(--bd);color:var(--mu)}
+.dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--gr);margin-right:6px}.dot.r{background:var(--rd)}
+.box{border:1px solid var(--bd);background:var(--pn)}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr)}.kpi{padding:12px 14px;border-right:1px solid var(--bd)}.kpi:last-child{border:0}
+.big{font-size:24px;margin:6px 0 4px}.sm{color:var(--mu);font-size:10px}
+.main{display:grid;grid-template-columns:1fr;gap:12px;margin-top:12px}
+.tracks{display:grid;grid-template-columns:1fr 1fr}.tr{padding:12px 14px;border-right:1px solid var(--bd);border-bottom:1px solid var(--bd)}
+.tr:nth-child(2n){border-right:0}.tr:nth-child(n+3){border-bottom:0}
+.trh{display:flex;justify-content:space-between;align-items:flex-start;gap:6px}.trh b{font-size:13px}
+.mid{font-size:17px;margin-top:4px}ul{margin:6px 0 0;padding-left:16px;color:var(--mu);font-size:10px}
+.sec{display:flex;justify-content:space-between;padding:10px 14px;border-bottom:1px solid var(--bd)}.sec .t{color:var(--am);font-size:10px;letter-spacing:.14em;text-transform:uppercase}
+table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}th{color:var(--mu);font-weight:400;font-size:9px;letter-spacing:.12em;text-transform:uppercase;text-align:right;padding:7px 14px;border-bottom:1px solid var(--bd)}
+td{text-align:right;padding:7px 14px;border-bottom:1px solid var(--bd);font-size:11px}th:first-child,td:first-child{text-align:left}tr:last-child td{border-bottom:0}
+.up{color:var(--gr)}.dn{color:var(--rd)}.nf{color:var(--rd);font-style:italic;font-size:10px}
+.donut{display:flex;justify-content:center;padding:18px 0}.leg div{display:flex;justify-content:space-between;padding:6px 14px;border-top:1px solid var(--bd);font-size:11px}
+.strip{display:grid;grid-template-columns:repeat(6,1fr);margin-top:12px}.strip div{padding:8px 12px;border-right:1px solid var(--bd);font-size:11px}.strip div:last-child{border:0}
+body.mobile .kpis,body.mobile .tracks{grid-template-columns:1fr}body.mobile .kpi,body.mobile .tr{border-right:0;border-bottom:1px solid var(--bd)}
+body.mobile .main{grid-template-columns:1fr}body.mobile .strip{grid-template-columns:1fr 1fr}body.mobile th,body.mobile td{padding:6px 5px}
+@media(max-width:820px){.kpis,.tracks,.main{grid-template-columns:1fr}.strip{grid-template-columns:1fr 1fr}}
+</style></head><body>
+<div class="top"><div><span class="lbl">Theme</span><span class="seg" id="theme">
+<button data-v="terminal" class="on">Terminal</button><button data-v="obsidian">Obsidian</button><button data-v="paper">Paper</button><button data-v="pulse">Pulse</button></span></div>
+<div><span class="lbl">View</span><span class="seg" id="view"><button data-v="desktop" class="on">Desktop</button><button data-v="mobile">Mobile</button></span></div></div>
+<div class="wrap">
+<div class="hd"><div><h1><b>&gt;</b>MARKETS OVERVIEW</h1>
+<div class="sub">Delayed quotes (yfinance) · refreshed <span id="gen">no live feed</span> · Research only. No trades are executed from this dashboard.</div></div>
+<div><span class="badge">YFINANCE · DELAYED</span> <span class="badge g" id="feedb"><span class="dot"></span>FEEDS</span></div></div>
+<div class="main"><div>
+<div class="box tracks" id="tracks"></div>
+<div class="box" style="margin-top:12px"><div class="sec"><span class="t">Watchlist Quotes</span><span class="sm">delayed · times ET</span></div>
+<table><thead><tr><th>Symbol</th><th>Track</th><th>Price</th><th>Day Chg</th><th>Day %</th><th>As of (ET)</th></tr></thead><tbody id="q"></tbody></table></div>
+</div></div>
+<div class="box strip" id="strip"></div>
+</div>
+<script>
+const NF='<span class="nf">no live feed</span>';
+const f=(v,d=2)=>v==null?NF:Number(v).toLocaleString('en-US',{minimumFractionDigits:d,maximumFractionDigits:d});
+const cls=v=>v>=0?'up':'dn';
+const ch=v=>v==null?NF:`<span class="${cls(v)}">${v>=0?'+':''}${f(v)}</span>`;
+const pc=v=>v==null?NF:`<span class="${cls(v)}">${v>=0?'+':''}${f(v)}%</span>`;
+const seg=(id,fn)=>document.querySelectorAll('#'+id+' button').forEach(b=>b.onclick=()=>{document.querySelectorAll('#'+id+' button').forEach(x=>x.classList.remove('on'));b.classList.add('on');fn(b.dataset.v)});
+seg('theme',v=>document.documentElement.dataset.theme=v);seg('view',v=>document.body.classList.toggle('mobile',v==='mobile'));
+const TR=[['LTP','<span class="badge g">WATCHLIST</span>','Long-term watchlist',['TSLA','NVDA','SMH']],
+ ['Options','<span class="badge">WATCHLIST</span>','Options underlyings',['SMH','NVDA','AMD','XLK']],
+ ['Futures','<span class="badge">WATCHLIST</span>','Index futures',['NQ=F']],
+ ['Agentic','<span class="badge m">IDLE</span>','No active project',[]]];
+fetch('data.json?'+Date.now()).then(r=>r.json()).catch(()=>({quotes:{}})).then(D=>{
+ const Q=s=>(D.quotes||{})[s]||{},ok=s=>Q(s).price!=null&&!Q(s).error;
+ document.getElementById('gen').textContent=D.generated_et||'no live feed';
+ document.getElementById('tracks').innerHTML=TR.map(t=>`<div class="tr"><div class="trh"><b>${t[0]}</b>${t[1]}</div><div class="lbl" style="margin-top:8px">${t[2]}</div><div class="mid">${t[3].length?t[3].join(' · '):'<span class="sm">No active project</span>'}</div></div>`).join('');
+ const rows=[];TR.forEach(t=>t[3].forEach(s=>rows.push([s,t[0]])));
+ document.getElementById('q').innerHTML=rows.map(([s,t])=>{const q=Q(s);return `<tr><td><b>${s}</b></td><td>${t}</td><td>${ok(s)?f(q.price):NF}</td><td>${ok(s)?ch(q.change):NF}</td><td>${ok(s)?pc(q.change_pct):NF}</td><td>${ok(s)?(q.asof_et||'—')+' · delayed':NF}</td></tr>`}).join('');
+ const syms=['TSLA','NVDA','SMH','AMD','XLK','NQ=F'];let bad=0;
+ document.getElementById('strip').innerHTML=syms.map(s=>{const g=ok(s);if(!g)bad++;return `<div><span class="dot ${g?'':'r'}"></span><b>${s}</b><div class="sm">${g?Q(s).asof_et:'no live feed'}</div></div>`}).join('');
+ const fb=document.getElementById('feedb');fb.className='badge '+(bad?'r':'g');fb.innerHTML=`<span class="dot ${bad?'r':''}"></span>${syms.length-bad}/${syms.length} FEEDS`;
+});
+</script></body></html>
