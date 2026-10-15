@@ -1,41 +1,41 @@
 {
-  "generated_et": "2026-10-14 19:21 ET",
+  "generated_et": "2026-10-15 19:11 ET",
   "quotes": {
     "TSLA": {
-      "price": 367.16,
-      "change": -8.07,
-      "change_pct": -2.15,
-      "asof_et": "2026-10-14 close"
+      "price": 362.44,
+      "change": -4.72,
+      "change_pct": -1.29,
+      "asof_et": "2026-10-15 close"
     },
     "NVDA": {
-      "price": 221.3,
-      "change": -7.22,
-      "change_pct": -3.16,
-      "asof_et": "2026-10-14 close"
+      "price": 217.23,
+      "change": -4.07,
+      "change_pct": -1.84,
+      "asof_et": "2026-10-15 close"
     },
     "SMH": {
-      "price": 564.74,
-      "change": -23.38,
-      "change_pct": -3.98,
-      "asof_et": "2026-10-14 close"
+      "price": 558.84,
+      "change": -5.9,
+      "change_pct": -1.04,
+      "asof_et": "2026-10-15 close"
     },
     "AMD": {
-      "price": 570.82,
-      "change": -34.71,
-      "change_pct": -5.73,
-      "asof_et": "2026-10-14 close"
+      "price": 562.23,
+      "change": -8.59,
+      "change_pct": -1.5,
+      "asof_et": "2026-10-15 close"
     },
     "XLK": {
-      "price": 190.43,
-      "change": -5.85,
-      "change_pct": -2.98,
-      "asof_et": "2026-10-14 close"
+      "price": 189.19,
+      "change": -1.24,
+      "change_pct": -0.65,
+      "asof_et": "2026-10-15 close"
     },
     "NQ=F": {
-      "price": 29984.0,
-      "change": -807.5,
-      "change_pct": -2.62,
-      "asof_et": "2026-10-14 close"
+      "price": 30069.25,
+      "change": -113.5,
+      "change_pct": -0.38,
+      "asof_et": "2026-10-15 close"
     }
   }
 }
