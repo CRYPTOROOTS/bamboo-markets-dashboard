@@ -1,41 +1,41 @@
 {
-  "generated_et": "2026-11-11 20:58 ET",
+  "generated_et": "2026-11-12 20:21 ET",
   "quotes": {
     "TSLA": {
       "price": NaN,
       "change": NaN,
       "change_pct": NaN,
-      "asof_et": "2026-11-11 close"
+      "asof_et": "2026-11-12 close"
     },
     "NVDA": {
       "price": NaN,
       "change": NaN,
       "change_pct": NaN,
-      "asof_et": "2026-11-11 close"
+      "asof_et": "2026-11-12 close"
     },
     "SMH": {
       "price": NaN,
       "change": NaN,
       "change_pct": NaN,
-      "asof_et": "2026-11-11 close"
+      "asof_et": "2026-11-12 close"
     },
     "AMD": {
       "price": NaN,
       "change": NaN,
       "change_pct": NaN,
-      "asof_et": "2026-11-11 close"
+      "asof_et": "2026-11-12 close"
     },
     "XLK": {
       "price": NaN,
       "change": NaN,
       "change_pct": NaN,
-      "asof_et": "2026-11-11 close"
+      "asof_et": "2026-11-12 close"
     },
     "NQ=F": {
-      "price": 28281.75,
-      "change": 446.5,
-      "change_pct": 1.6,
-      "asof_et": "2026-11-11 close"
+      "price": 28499.5,
+      "change": 26.25,
+      "change_pct": 0.09,
+      "asof_et": "2026-11-12 close"
     }
   }
 }
